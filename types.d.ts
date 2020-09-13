@@ -19,7 +19,7 @@ interface IOptionsBase {
 // Form and data property has been written this way so they're mutually exclusive.
 type IWithData<T extends {}> = T & {
   data: {
-    toString(): string
+    [key: string]: string | number | boolean
   }
 }
 
